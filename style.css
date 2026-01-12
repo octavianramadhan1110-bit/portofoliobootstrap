@@ -1,0 +1,194 @@
+/* LIGHT MODE */
+[data-bs-theme="light"] {
+  --bg-main: #ffffff;
+  --bg-section: #f8f9fa;
+  --text-main: #212529;
+  --card-bg: #ffffff;
+  --navbar-bg: #09b11c;
+  --navbar-text: #ffffff;
+}
+
+/* DARK MODE */
+[data-bs-theme="dark"] {
+  --bg-main: #121212;
+  --bg-section: #1e1e1e;
+  --text-main: #eaeaea;
+  --card-bg: #242424;
+  --navbar-bg: #ff9800;
+  --navbar-text: #000000;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section {
+  background-color: var(--bg-section);
+  padding: 60px 0;
+  transition: background-color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label {
+  color: var(--text-main);
+}
+
+/*NAVBAR*/
+
+.navbar {
+  background-color: var(--navbar-bg) !important;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--navbar-text) !important;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+/* Toggle Dark Light */
+.theme-toggle {
+  z-index: 10;
+}
+
+/* Desktop: tombol di tengah */
+@media (min-width: 992px) {
+  .theme-toggle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile: tombol aman */
+@media (max-width: 991px) {
+  .theme-toggle {
+    margin-left: auto;
+  }
+}
+
+/* jumbotron */
+
+.jumbotron {
+  background-color: var(--bg-section);
+  padding: 80px 20px;
+}
+
+/* card  */
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* skill */
+
+.skill,
+.skill .card {
+  background-color: var(--bg-section);
+  color: var(--text-main);
+}
+
+/* Progress Bar */
+.progress {
+  background-color: #e9ecef;
+}
+
+[data-bs-theme="dark"] .progress {
+  background-color: #444;
+}
+
+.progress-bar {
+  background-color: #0d6efd;
+}
+
+/* form */
+
+.form-control {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid #ccc;
+}
+
+[data-bs-theme="dark"] .form-control {
+  border-color: #555;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+/* Light */
+[data-bs-theme="light"] .wave path {
+  fill: #f3f4f5;
+}
+
+/* Dark */
+[data-bs-theme="dark"] .wave path {
+  fill: #1e1e1e;
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
+  padding: 20px 0;
+}
+
+.footer a {
+  color: var(--navbar-text);
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
+
+.btn-theme {
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
+  border: none;
+}
+
+.btn-theme:hover {
+  opacity: 0.85;
+}
+
+/* FORCE SKILL THEME */
+.skill {
+  background-color: var(--bg-section) !important;
+  color: var(--text-main) !important;
+}
+
+.skill h1,
+.skill h2,
+.skill h3,
+.skill p {
+  color: var(--text-main) !important;
+}
+
+.skill .card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-main) !important;
+}
